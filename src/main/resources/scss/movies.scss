@@ -1,0 +1,75 @@
+
+.movie-main {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.movie-rating {
+  position:relative;
+  height:20px;
+}
+
+.movie-stars {
+  position:absolute;
+  clip: rect(0px,0px,20px,0px);
+}
+
+.movies-listing {
+  display: inline-block;
+  margin-right:80px;
+}
+
+.movie-header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.movie-title {
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.movie-description {
+  position: relative;
+}
+
+.movie-upload-textarea {
+  width: 100%;
+  height: 400px;
+}
+
+.movie-list {
+  .movie-search {
+    margin-bottom:2em;
+
+    #search-text {
+      border: 0;
+      border-bottom: solid 1px #eee;
+      margin-left: 50px;
+    }
+  }
+}
+
+.movie-detail {
+  .header {
+    display: block;
+    width: 100%;
+    img {
+      display: inline-block;
+      cursor: pointer;
+    }
+    h1 {
+      display: inline-block;
+      margin-left: 30px;
+    }
+  }
+  .content {
+    display: block;
+    width: 100%;
+    .lhs, .movie-description {
+      display: inline-block;
+    }
+    .movie-description {
+      margin-top:1em;
+    }
+  }
+}

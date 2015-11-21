@@ -1,0 +1,36 @@
+{
+  "name": "angular-movie-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-run": "^0.5.2",
+    "grunt-contrib-concat": "~0.5.0",
+    "grunt-contrib-sass": "~0.8.1",
+    "grunt-contrib-uglify": "~0.7.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-karma": "0.10.1",
+    "grunt-sass": "^0.18.1",
+    "http-server": "^0.6.1",
+    "jasmine-reporters": "^1.0.0",
+    "karma": "0.12.x",
+    "karma-chrome-launcher": "~0.1.7",
+    "karma-commonjs": "0.0.13",
+    "karma-coverage": "0.2.1",
+    "karma-firefox-launcher": "^0.1.4",
+    "karma-htmlfile-reporter": "~0.1",
+    "karma-jasmine": "0.1.x",
+    "karma-junit-reporter": "0.2.1",
+    "karma-phantomjs-launcher": "~0.1",
+    "live-server": "^0.8.2"
+  },
+  "scripts": {
+    "postinstall": "bower install"
+  },
+  "keywords": [],
+  "author": "paulhemmings",
+  "license": "ISC"
+}

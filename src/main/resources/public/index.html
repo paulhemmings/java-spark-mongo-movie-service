@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="MainApplicationModule">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Razor movies">
+    <meta name="author" content="paulhemmings">
+    <title>Razor - movies</title>
+
+    <!-- CSS -->
+    <link href="/styles/movies.css" rel="stylesheet" />
+
+    <!-- Bootstrap core CSS -->
+     <link href="lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+
+
+      <div class="movie-masthead">
+        <div class="container">
+          <nav class="movie-nav">
+            <a class="movie-nav-item active" href="#/movies">Home</a>
+            <a class="movie-nav-item" href="#/upload">Upload</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="container">
+
+        <div class="movie-header">
+          <h1 class="movie-title">Movies</h1>
+          <p class="lead movie-description">The client app for movies API service.</p>
+        </div>
+
+        <div class="row">
+            <div ui-view="content"></div>
+        </div><!-- /.row -->
+
+      </div><!-- /.container -->
+
+    <!-- dependencies -->
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="lib/angular-animate/angular-animate.min.js"></script>
+
+    <!-- application -->
+    <script src="app/app.js"></script>
+    <script src="app/services/movies-service.js"></script>
+    <script src="app/controllers/movies-controller.js"></script>
+      <script src="app/controllers/upload-controller.js"></script>
+
+    <!-- bootstrap responsive dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

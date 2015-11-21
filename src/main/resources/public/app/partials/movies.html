@@ -1,0 +1,42 @@
+<div class="col-sm-12 movie-main">
+
+    <!-- show movie list -->
+
+    <div class="movie-list" ng-show="!hasSelected()">
+        <div class="movie-search">
+            <label for="search-text">Search:</label>
+            <input id="search-text" type="text" ng-model="searchText"/>
+        </div>
+        <div style="width:100%">
+            <div ng-repeat="movie in movies | filter:searchText" class="movies-listing" ng-click="selectMovie(movie)">
+              <div class="movie-detail">
+                <img src="{{movie.imageUrl}}"/>
+                <h4 class="movie-title">{{movie.movieName}}</h4>
+                <div class="movie-rating">
+                    <img class="movie-stars" style="clip: rect(0px,{{buildStarLength(movie)}}px,20px,0px);" src="/images/stars.jpg"/>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- show movie detail -->
+
+    <div class="movie-detail" ng-show="hasSelected()">
+        <div class="header">
+            <img src="/images/back.png" ng-click="selectMovie(selectedMovie)"/>
+            <h1>{{selectedMovie.movieName}}</h1>
+        </div>
+        <div class="content">
+            <div class="lhs">
+                <img src="{{selectedMovie.imageUrl}}"/>
+                <div class="movie-rating">
+                    <img class="movie-stars" style="clip: rect(0px,{{buildStarLength(selectedMovie)}}px,20px,0px);" src="/images/stars.jpg"/>
+                </div>
+            </div>
+            <div class="movie-description">
+                {{selectedMovie.description}}
+            </div>
+        </div>
+    </div>
+</div>
