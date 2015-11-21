@@ -73,6 +73,8 @@ grunt_build.dependsOn 'installGrunt'
 // processes your package.json before running grunt build
 grunt_build.dependsOn 'npmInstall'
 
-build.dependsOn grunt_build
 // runs "grunt build" as part of your gradle build
 build.dependsOn grunt_build
+
+// runs "grunt test" as part of your gradle test
+// test.dependsOn grunt_test

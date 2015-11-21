@@ -1,3 +1,4 @@
+'use strict';
 
 /*
  * Data provider service.
@@ -14,13 +15,13 @@ angular
     .service('moviesService', function($http) {
 
         function rootServiceUrl() {
-            return "http://localhost:4567";
+            return 'http://localhost:4567';
         }
         
         function listMovies() {
             return $http({
                 url: rootServiceUrl() + '/movies',
-                method: "GET"
+                method: 'GET'
             });
         }
 
@@ -28,14 +29,14 @@ angular
             return $http({
                 url: rootServiceUrl() + '/movie',
                 data: movie,
-                method: "PUT"
+                method: 'PUT'
             });
         }
 
         function getMovie(movie) {
             return $http({
                 url: rootServiceUrl() + '/movie/' + movie.id,
-                method: "GET"
+                method: 'GET'
             });
         }
 

@@ -1,3 +1,5 @@
+'use strict';
+
 /*
  * Main Angular module
  *
@@ -39,5 +41,5 @@ angular
                     controller: 'UploadController'
                 }
             }
-        })
+        });
 }]);

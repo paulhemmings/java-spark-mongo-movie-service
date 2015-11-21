@@ -1,3 +1,5 @@
+'use strict';
+
 angular
     .module('MainApplicationModule')
     .controller('UploadController', ['$scope', 'moviesService',
@@ -26,6 +28,6 @@ angular
 
             $scope['__test__'] = {
                 handleResponse: handleResponse
-            }
+            };
 
         }]);

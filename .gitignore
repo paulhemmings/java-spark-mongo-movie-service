@@ -1,0 +1,23 @@
+# Coverage directory
+coverage
+
+# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+#Gradle files
+.gradle
+gradle
+gradlew
+gradlew.bat
+build
+
+# Sass
+.sass-cache
+src/main/resources/public/styles
+
+# Dependency directories
+node_modules
+lib
+
+# OSX
+.DS_Store

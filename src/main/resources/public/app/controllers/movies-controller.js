@@ -1,3 +1,5 @@
+'use strict';
+
 angular
     .module('MainApplicationModule')
     .controller('MoviesController', ['$scope', 'moviesService',
@@ -11,7 +13,7 @@ angular
             $scope.hasSelected = hasSelected;
 
             function buildStarLength(movie) {
-                if (movie == null) {
+                if (movie === null) {
                     return 0;
                 }
                 return 3 + (movie.rating*14);
@@ -21,7 +23,7 @@ angular
                 if (isSelected(movie)) {
                     $scope.selectedMovie = null;
                     return;
-                };
+                }
                 $scope.selectedMovie = movie;
             }
 
@@ -30,7 +32,7 @@ angular
             }
 
             function hasSelected() {
-                return $scope.selectedMovie != null;
+                return $scope.selectedMovie !== null;
             }
 
             function loadMovies(response) {
@@ -50,6 +52,6 @@ angular
 
             $scope['__test__'] = {
                 loadMovies: loadMovies
-            }
+            };
 
         }]);

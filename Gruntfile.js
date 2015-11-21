@@ -71,18 +71,30 @@ module.exports = function(grunt) {
             }
         },
 
+        jshint: {
+          options: {
+            jshintrc: '.jshintrc',
+            reporter: require('jshint-stylish')
+          },
+          all: {
+            src: [
+              '<%= project.app %>/{,*/}*.js'
+            ]
+          }
+        },
+
         run: {
             install: {
-              cmd: 'npm',
-              args: [
-                'install'
-              ]
+                cmd: 'npm',
+                args: [
+                    'install'
+                ]
             },
             start: {
-              cmd: 'npm',
-              args: [
-                'start'
-              ]
+                cmd: 'npm',
+                args: [
+                    'start'
+                ]
             }
         }
 
@@ -96,6 +108,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
 
@@ -103,8 +116,8 @@ module.exports = function(grunt) {
 
     // 5. Where we tell Grunt what other tasks to run
 
-    grunt.registerTask('test', ['run:install', 'karma']);
-    grunt.registerTask('build', ['run:install', 'sass:dev', 'karma']);
+    grunt.registerTask('test', ['run:install', 'jshint', 'karma']);
+    grunt.registerTask('build', ['run:install', 'sass:dev']);
     grunt.registerTask('pre-deploy', ['sass:dist', 'concat', 'uglify']);
 
 };
