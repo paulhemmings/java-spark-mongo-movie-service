@@ -116,7 +116,7 @@ module.exports = function(grunt) {
 
     // 5. Where we tell Grunt what other tasks to run
 
-    grunt.registerTask('test', ['run:install', 'jshint', 'karma']);
+    grunt.registerTask('test', ['run:install', 'karma', 'jshint']);
     grunt.registerTask('build', ['run:install', 'sass:dev']);
     grunt.registerTask('pre-deploy', ['sass:dist', 'concat', 'uglify']);
 

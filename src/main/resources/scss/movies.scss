@@ -65,11 +65,15 @@
   .content {
     display: block;
     width: 100%;
-    .lhs, .movie-description {
-      display: inline-block;
-    }
     .movie-description {
+      display: inline-block;
+      width:79%;
       margin-top:1em;
+    }
+    .movie-lhs {
+      vertical-align: top;
+      display: inline-block;
+      width:20%;
     }
   }
 }
