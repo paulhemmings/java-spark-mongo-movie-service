@@ -1,4 +1,9 @@
 <div class="upload-movie-container">
     <textarea class="movie-upload-textarea" ng-model="movie"></textarea>
     <button ng-click="uploadMovie(movie)">Upload</button>
+    <div style="vertical-align: top;display: inline-block;" >
+        <ul style="display: inline-block;list-style: none;">
+            <li ng-repeat="s in status track by $index">{{s}}</li>
+        </ul>
+    </div>
 </div>

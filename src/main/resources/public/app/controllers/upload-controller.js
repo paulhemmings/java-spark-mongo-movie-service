@@ -7,13 +7,28 @@ angular
 
             $scope.movie = null;
             $scope.uploadMovie = uploadMovie;
+            $scope.status = [];
 
-            function uploadMovie(movie) {
-                moviesService.updateMovie(movie).then(handleResponse);
+            function setStatus(status) {
+                console.log(status);
+                $scope.status.push(status);
+                if ($scope.status.length > 5) {
+                    $scope.status.splice(0, 1);
+                }
             }
 
-            function handleResponse(response) {
+            function uploadMovie(movie) {
+                setStatus("update movie");
+                moviesService.updateMovie(movie).then(handleSuccess, handleError);
+            }
+
+            function handleSuccess(response) {
+                setStatus("movie " + response.data.movie_name + " created");
                 $scope.movie = JSON.stringify(response.data);
+            }
+
+            function handleError() {
+                setStatus("an error occurred");
             }
 
             function initialize() {
@@ -27,7 +42,9 @@ angular
              */
 
             $scope['__test__'] = {
-                handleResponse: handleResponse
+                handleSuccess: handleSuccess,
+                handleError: handleError,
+                setStatus: setStatus
             };
 
         }]);
