@@ -47,6 +47,15 @@
       margin-left: 50px;
     }
   }
+  .movie-search-results {
+    .movies-listing {
+      .movie-item {
+        img: {
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }
 
 .movie-detail {

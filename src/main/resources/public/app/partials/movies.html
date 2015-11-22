@@ -7,9 +7,9 @@
             <label for="search-text">Search:</label>
             <input id="search-text" type="text" ng-model="searchText"/>
         </div>
-        <div style="width:100%">
+        <div class="movie-search-results">
             <div ng-repeat="movie in movies | filter:searchText" class="movies-listing" ng-click="selectMovie(movie)">
-              <div class="movie-detail">
+              <div class="movie-item">
                 <img src="{{movie.imageUrl}}"/>
                 <h4 class="movie-title">{{movie.movieName}}</h4>
                 <div class="movie-rating">
