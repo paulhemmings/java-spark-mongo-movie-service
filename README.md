@@ -74,8 +74,8 @@ The upload process takes a JSON payload. If uploaded successfully the text area 
 
 ````
 {
-    "movieName" : "Avengers - Age of Ultron",
-    "imageUrl" : "http://resizing.flixster.com/s8kIQtOhr36lGPkcUGCVeqVWw9Y=/180x270/dkpu1ddg7pbsk.cloudfront.net/movie/11/19/01/11190143_ori.jpg",
+    "movie_name" : "Avengers - Age of Ultron",
+    "image_url" : "http://resizing.flixster.com/s8kIQtOhr36lGPkcUGCVeqVWw9Y=/180x270/dkpu1ddg7pbsk.cloudfront.net/movie/11/19/01/11190143_ori.jpg",
     "rating" : "4.5",
     "description" : "When Tony Stark jumpstarts a dormant peacekeeping program, things go awry and Earth's Mightiest Heroes, including Iron Man, Captain America, Thor, The Incredible Hulk, Black Widow and Hawkeye, are put to the ultimate test as they battle to save the planet from destruction at the hands of the villainous Ultron."
 }

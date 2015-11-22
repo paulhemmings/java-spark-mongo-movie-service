@@ -1,12 +1,17 @@
 package com.razor.movies.server.models;
 
+import com.google.gson.annotations.SerializedName;
 import org.mongodb.morphia.annotations.Entity;
 
 @Entity("movies")
 public class MovieModel extends com.razor.movies.server.models.MongoModel {
 
+    @SerializedName("movie_name")
     private String movieName;
+
+    @SerializedName("image_url")
     private String imageUrl;
+
     private String rating;
     private String description;
 

@@ -1,9 +1,5 @@
 package com.razor.movies.server.models;
 
-// import org.jongo.marshall.jackson.oid.Id;
-// import org.jongo.marshall.jackson.oid.ObjectId;
-// import org.mongodb.morphia.annotations.Id;
-
 public class MongoModel {
 
     @org.mongodb.morphia.annotations.Id

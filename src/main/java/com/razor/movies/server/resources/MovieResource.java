@@ -6,7 +6,7 @@ import static com.razor.movies.server.utilities.JsonUtils.json;
 import static spark.Spark.get;
 import static spark.Spark.put;
 
-public class MovieResource {
+public class MovieResource extends BaseResource {
 
     private MovieService movieService;
 

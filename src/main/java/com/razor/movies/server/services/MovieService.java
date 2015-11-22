@@ -3,6 +3,7 @@ package com.razor.movies.server.services;
 import com.google.gson.Gson;
 import com.razor.movies.server.models.MovieModel;
 import com.razor.movies.server.providers.ModelProvider;
+import spark.utils.StringUtils;
 
 import java.util.List;
 
@@ -32,13 +33,23 @@ public class MovieService {
         return this.getProvider().find(key, value);
     }
 
-    public MovieModel update(MovieModel movieModel) {
+    /**
+     * Insert or update an existing movie model
+     * Throw an exception if the model does not have a name (very basic validation)
+     * @param movieModel
+     * @return
+     * @throws ServiceException
+     */
+
+    public MovieModel update(MovieModel movieModel) throws ServiceException {
+        if (StringUtils.isEmpty(movieModel.getMovieName())) {
+            throw new ServiceException("Movie definition not valid");
+        }
         return this.getProvider().update(movieModel, movieModel.getId());
     }
 
-    public MovieModel update(String body) {
-        MovieModel movieModel = new Gson().fromJson(body, MovieModel.class);
-        return this.getProvider().update(movieModel, movieModel.getId());
+    public MovieModel update(String body) throws ServiceException {
+        return update(new Gson().fromJson(body, MovieModel.class));
     }    
 
 }
