@@ -15,24 +15,21 @@ module.exports = function (karma) {
 
     /******* Core Dependencies (Order Matters!) ******************/
         './../../main/resources/public/lib/angular/angular.js',
-        './../../main/resources/public/lib/angular-route/angular-route.js',
         './../../main/resources/public/lib/angular-ui-router/release/angular-ui-router.min.js',
         './../../main/resources/public/lib/angular-animate/angular-animate.js',
         './../../main/resources/public/lib/angular-sanitize/angular-sanitize.js',
-        './../../main/resources/public/lib/angular-ui-select/dist/select.js',
-        './../../main/resources/public/lib/angular-loading-bar/build/loading-bar.js',
         './../../main/resources/public/app/**/*.js',
 
     /******* Test Libraries (relative to basePath) ******************/
         './../../main/resources/public/lib/angular-mocks/angular-mocks.js',
 
     /******* Test Fixtures ******************/
-      {
-        pattern: './app/fixtures/*.html',
-        watched: false,
-        served: true,
-        included: false
-      },
+      // {
+      //   pattern: './app/fixtures/*.html',
+      //   watched: false,
+      //   served: true,
+      //   included: false
+      // },
 
     /******* Jasmine Tests ******************/
       './app/**/*-test.js'

@@ -21,3 +21,7 @@ lib
 
 # OSX
 .DS_Store
+
+# IDE
+.idea
+java-spark-mongo-movie-service.iml

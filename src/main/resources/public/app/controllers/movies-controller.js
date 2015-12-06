@@ -7,33 +7,30 @@ angular
 
             $scope.movies = [];
             $scope.selectedMovie = null;
-            $scope.buildStarLength = buildStarLength;
-            $scope.selectMovie = selectMovie;
-            $scope.isSelected = isSelected;
-            $scope.hasSelected = hasSelected;
 
-            function buildStarLength(movie) {
+            $scope.buildStarLength = function(movie) {
                 if (movie === null) {
                     return 0;
                 }
                 return 3 + (movie.rating*14);
-            }
+            };
 
-            function selectMovie(movie) {
-                if (isSelected(movie)) {
+            $scope.isSelected = function(movie) {
+                return $scope.selectedMovie === movie;
+            };
+
+            $scope.hasSelected = function() {
+                return $scope.selectedMovie !== null;
+            };
+
+
+            $scope.selectMovie = function(movie) {
+                if ($scope.isSelected(movie)) {
                     $scope.selectedMovie = null;
                     return;
                 }
                 $scope.selectedMovie = movie;
-            }
-
-            function isSelected(movie) {
-                return $scope.selectedMovie === movie;
-            }
-
-            function hasSelected() {
-                return $scope.selectedMovie !== null;
-            }
+            };
 
             function loadMovies(response) {
                 $scope.movies = response.data;
@@ -46,11 +43,10 @@ angular
             initialize();
 
             /*
-             * How do you unit test private methods?
-             * Expose them via a "test" property
+             * Expose private methods via a "test" property
              */
 
-            $scope['__test__'] = {
+            $scope.__test__ = {
                 loadMovies: loadMovies
             };
 

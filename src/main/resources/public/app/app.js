@@ -30,6 +30,10 @@ angular
                 'content': {
                     templateUrl: '/app/partials/movies.html',
                     controller: 'MoviesController'
+                },
+                'navigation': {
+                    templateUrl: '/app/partials/navigation.html',
+                    controller: 'NavigationController'
                 }
             }
         })
@@ -39,6 +43,10 @@ angular
                 'content': {
                     templateUrl: '/app/partials/upload.html',
                     controller: 'UploadController'
+                },
+                'navigation': {
+                    templateUrl: '/app/partials/navigation.html',
+                    controller: 'NavigationController'
                 }
             }
         });

@@ -19,10 +19,7 @@
 
       <div class="movie-masthead">
         <div class="container">
-          <nav class="movie-nav">
-            <a class="movie-nav-item active" href="#/movies">Home</a>
-            <a class="movie-nav-item" href="#/upload">Upload</a>
-          </nav>
+          <div ui-view="navigation"></div>
         </div>
       </div>
 
@@ -48,7 +45,8 @@
     <script src="app/app.js"></script>
     <script src="app/services/movies-service.js"></script>
     <script src="app/controllers/movies-controller.js"></script>
-      <script src="app/controllers/upload-controller.js"></script>
+    <script src="app/controllers/upload-controller.js"></script>
+    <script src="app/controllers/navigation-controller.js"></script>
 
     <!-- bootstrap responsive dependencies -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
