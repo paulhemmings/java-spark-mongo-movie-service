@@ -11,8 +11,11 @@ public class MovieService {
 
     private ModelProvider<MovieModel> provider;
 
-    public MovieService() {
-    }
+    /**
+     * Set the model provider
+     * @param provider
+     * @return
+     */
 
     public MovieService setModelProvider(ModelProvider<MovieModel> provider) {
         this.provider = provider;
@@ -21,13 +24,31 @@ public class MovieService {
 
     public ModelProvider<MovieModel> getProvider() { return this.provider; }
 
+    /**
+     * Return all movies
+     * @return
+     */
+
     public List<MovieModel> findAll() {
         return this.getProvider().findAll();
     }
 
+    /**
+     * Find a model by the ID
+     * @param id
+     * @return
+     */
+
     public MovieModel findById(String id) {
         return this.getProvider().findById(id);
     }
+
+    /**
+     * Find a model, via a key value pair
+     * @param key
+     * @param value
+     * @return
+     */
 
     public List<MovieModel> find(String key, String value) {
         return this.getProvider().find(key, value);

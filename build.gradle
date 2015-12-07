@@ -57,6 +57,9 @@ dependencies {
             [ group: 'org.mockito',                name: 'mockito-all',         version: '1.9.5' ],
             [ group: 'org.gebish',                 name: 'geb-spock',           version: gebSpockVersion ]
     )
+
+    /* Spock :: Mocking of non-interface types requires the CGLIB library */
+    runtime "cglib:cglib:2.2.2"
 }
 
 
@@ -77,4 +80,4 @@ grunt_build.dependsOn 'npmInstall'
 build.dependsOn grunt_build
 
 // runs "grunt test" as part of your gradle test
-// test.dependsOn grunt_test
+test.dependsOn grunt_test

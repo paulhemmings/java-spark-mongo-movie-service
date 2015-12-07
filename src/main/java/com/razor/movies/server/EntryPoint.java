@@ -34,7 +34,7 @@ public class EntryPoint {
         ModelProvider<MovieModel> modelProvider = new ProviderFactory<MovieModel>()
                 .buildProvider(persistenceConfig, client, persistenceConfig.mongoDatabase(), "movies", MovieModel.class);
 
-        new MovieResource().setMovieService(new MovieService().setModelProvider(modelProvider));
+        new MovieResource(new MovieService().setModelProvider(modelProvider));
     }
 
     private static MongoClient buildClient(PersistenceConfig persistenceConfig) {
